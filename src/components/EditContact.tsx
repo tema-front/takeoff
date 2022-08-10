@@ -8,9 +8,9 @@ interface EditContactInterface {
     contactEditing: IContact
 }
 
+// Компонент формы модального окна. Служит для редактирования контакта
 export const EditContact: FC<EditContactInterface> = ({ closeModalWindow, contactEditing }) => {
     const dispatch = useDispatch();
-
     const [newContactName, setNewContactName] = useState<string>(contactEditing.name);
     const [newContactNumber, setNewContactNumber] = useState<number>(contactEditing.number);
 
@@ -22,11 +22,9 @@ export const EditContact: FC<EditContactInterface> = ({ closeModalWindow, contac
         setNewContactNumber(e.target.valueAsNumber);
     }
 
-
     const submitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
         if (!newContactName || !newContactNumber) return;
-        // dispatch(editContact(newContactName, newContactNumber, 2))
         dispatch(editContact(newContactName, newContactNumber, contactEditing.id))
         closeModalWindow();
     }

@@ -38,6 +38,12 @@ html {
             font-size: 20px;
             font-family: sans-serif;
 
+            &.disabled {
+                opacity: 0.5;
+                pointer-events: none;
+                cursor: not-allowed;
+            }
+
             &:last-child {
                 margin: 0;
             }
@@ -231,11 +237,101 @@ html {
         border-radius: 10px;
         border: 2px solid #ffffff;
         padding: 5px 7px;
+        width: 100%;
         outline: none;
         margin: 0 0 20px;
 
         color: rgb(46, 136, 202);
         font-size: 16px;
+        font-family: sans-serif;
+
+        &.operator {
+            padding: 5px 7px 5px 18px;
+        }
+
+        &-wrp.operator {
+            position: relative;
+
+            &::before {
+                content: '+';
+                position: absolute;
+                top: 3.5px;
+                left: 7px;
+                color: #2e88ca;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.auth {
+    background-color: rgba(46, 136, 202, 0.6);
+    border-radius: 10px;
+    min-height: 500px;
+    position: relative;
+
+    &-wrp {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    &-greeting {
+        color: #ffffff;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+
+        &-input {
+            border-radius: 10px;
+            border: 2px solid #ffffff;
+            padding: 5px 7px;
+            outline: none;
+            color: #2e88ca;
+            font-size: 16px;
+            font-family: sans-serif;
+            margin: 0 0 15px;
+        }
+
+        &-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-family: sans-serif;
+            margin: 0 0 15px;
+        }
+
+        &-btn {
+            border: 3px solid #ffffff;
+            background-color: rgb(46, 136, 202);
+            border-radius: 10px;
+            padding: 5px 7px;
+
+            color: #ffffff;
+            font-size: 16px;
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+    }
+
+    &-title {
+        border-bottom: 2px solid #ffffff;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        min-height: 56px;
+        color: #ffffff;
+        font-size: 20px;
         font-family: sans-serif;
     }
 }

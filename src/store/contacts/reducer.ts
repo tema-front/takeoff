@@ -1,15 +1,9 @@
 import { contactsAction, ContactsActionTypes, contactsState } from "../../types/contacts";
 
 const initialState: contactsState = {
-    // contactsList: [],
-    contactsList: [
-        { name: 'Jonh', number: 2211974, id: 1 },
-        { name: 'Alex', number: 895235333, id: 2 },
-        { name: 'Robert', number: 89109654643, id: 3 }
-    ],
+    contactsList: [],
     searchValue: ''
 }
-
 
 export const contactsReducer = (state = initialState, { type, payload }: contactsAction): contactsState => {
 

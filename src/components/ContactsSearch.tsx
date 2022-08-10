@@ -2,13 +2,12 @@ import { FC, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { clearSearch, onSearch } from "../store/contacts/actions";
 
-
+// Компонент формы для поиска контактов (доступен только при условии наличия контактов)
 export const ContactsSearch: FC = () => {
     const [searchValue, setSearchValue] = useState<string>('');
     const dispatch = useDispatch();
 
     const submitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
-        debugger
         e.preventDefault();
         dispatch(onSearch(searchValue.toLowerCase()))
     }

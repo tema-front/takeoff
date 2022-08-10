@@ -6,11 +6,8 @@ import { ContactsSearch } from "./ContactsSearch";
 import { ModalWindow } from "./ModalWindow";
 import { IContact } from "../types/contacts";
 
-interface ContactsListProps {
-
-}
-
-export const ContactsList: FC<ContactsListProps> = () => {
+// Компонент списка контактов
+export const ContactsList: FC = () => {
     const [modalWindow, setModalWindow] = useState<boolean>(false);
     const [contactEditing, setContactEditing] = useState<IContact>({ name: '', number: 0, id: 0 });
     const contactsList = useSelector((state: RootState) => state.stateContacts.contactsList);
@@ -48,7 +45,6 @@ export const ContactsList: FC<ContactsListProps> = () => {
                 </ul>
             </section>
             {modalWindow && <ModalWindow closeModalWindow={closeModalWindow} contactEditing={contactEditing} />}
-
         </>
     );
 }
