@@ -4,6 +4,7 @@
 Затем на второй консоли запускаем второй локальный хост с приложением, командой "npm start" 
 
 В приложении реализовал весь требуемый функционал, в том числе и поиск контактов
+Для асинхронных запросов к json-server использовал thunk middleware
 
 Node: v14.17.0
 Стек: typescript, react.js, router, redux, redux thunk, fake API json-server, scss
