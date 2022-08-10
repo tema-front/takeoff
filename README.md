@@ -7,5 +7,7 @@
 Для асинхронных запросов к json-server использовал thunk middleware
 
 Node: v14.17.0
+
 Стек: typescript, react.js, router, redux, redux thunk, fake API json-server, scss
+
 Резюме: https://hh.ru/resume/10206929ff0984c6100039ed1f637157647942
