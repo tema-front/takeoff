@@ -24,7 +24,7 @@ export const ContactsSearch: FC = () => {
 
     return (
         <form className="search" onSubmit={submitHandler}>
-            <input value={searchValue} onChange={changeHandler} type="text" className="search-input" placeholder="Name" />
+            <input value={searchValue} onChange={changeHandler} type="search" className="search-input" placeholder="Name" />
             <button type="submit" className="search-btn">Search</button>
         </form>
     );
